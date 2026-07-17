@@ -2,10 +2,10 @@
 class RustyPhotonPaScopsOagNightly < Formula
   desc "ASCOM Alpaca driver for the Pegasus Astro Scops OAG focuser"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.20260716.g5f506ab"
+  version "0.1.0+nightly.20260717.g30e49ad"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-pa-scops-oag-0.1.0+nightly.20260716.g5f506ab-aarch64-apple-darwin.tar.gz"
-  sha256 "3aa3095b7d518576503ee8393c92ba175a37d2a1aec8d8f93e27203a3feee164"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-pa-scops-oag-0.1.0+nightly.20260717.g30e49ad-aarch64-apple-darwin.tar.gz"
+  sha256 "3e17454ba7a010f6feede86741d8fc4eb23cc823433db278f164e1c9007caeb0"
 
   depends_on :macos
   depends_on arch: :arm64
