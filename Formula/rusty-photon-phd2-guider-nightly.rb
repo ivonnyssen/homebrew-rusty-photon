@@ -2,10 +2,10 @@
 class RustyPhotonPhd2GuiderNightly < Formula
   desc "PHD2 guider client library and service for Rusty Photon"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.20260717.g28dd149"
+  version "0.1.0+nightly.20260718.g338bd8d"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-phd2-guider-0.1.0+nightly.20260717.g28dd149-aarch64-apple-darwin.tar.gz"
-  sha256 "ca91476441ec576a0ebf7b06aa0014b0eb307d01dc64ff12893f8dea67b529d1"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-phd2-guider-0.1.0+nightly.20260718.g338bd8d-aarch64-apple-darwin.tar.gz"
+  sha256 "b37416da66db06365b903e0395ffaeeb5b326a2ea6f671733cdf3c4fe4f9f340"
 
   depends_on :macos
   depends_on arch: :arm64
