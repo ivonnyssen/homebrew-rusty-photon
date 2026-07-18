@@ -2,10 +2,10 @@
 class RustyPhotonSkySurveyCameraNightly < Formula
   desc "ASCOM Alpaca Camera simulator backed by NASA SkyView"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.20260718.g6f89442"
+  version "0.1.0+nightly.20260718.gdc375a7"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sky-survey-camera-0.1.0+nightly.20260718.g6f89442-aarch64-apple-darwin.tar.gz"
-  sha256 "12dabdf7a73fd711ee3462a4cd8e9c13c6a9c2dd11c367c85d118e5478ba1294"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sky-survey-camera-0.1.0+nightly.20260718.gdc375a7-aarch64-apple-darwin.tar.gz"
+  sha256 "4b69deeb400804f08ae5e7805365e7d38c6be99da1ec58bbd01b582d7fbacbbb"
 
   depends_on :macos
   depends_on arch: :arm64
