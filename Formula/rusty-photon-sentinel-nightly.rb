@@ -2,10 +2,10 @@
 class RustyPhotonSentinelNightly < Formula
   desc "Observatory monitoring and notification service"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.202607190022.g5f191ee"
+  version "0.1.0+nightly.202607190150.gd648745"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sentinel-0.1.0+nightly.202607190022.g5f191ee-aarch64-apple-darwin.tar.gz"
-  sha256 "9e4b1f0ccd845e1c6fc5789612528b9461f849bcc5bea7e51f830a9f12c6a00c"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sentinel-0.1.0+nightly.202607190150.gd648745-aarch64-apple-darwin.tar.gz"
+  sha256 "4f38fee25fd5939ca5c9e6971efd2a896ab2a4dfdbb9d706d48768dd88cfdbd2"
 
   depends_on :macos
   depends_on arch: :arm64
@@ -15,6 +15,34 @@ class RustyPhotonSentinelNightly < Formula
 
   def install
     bin.install "rusty-photon-sentinel"
+    bin.install "rusty-photon-doctor"
+    (prefix/"rusty-photon-renew.plist").write <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+      <dict>
+        <key>Label</key>
+        <string>space.rustyphoton.renew</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>#{opt_bin}/rusty-photon-doctor</string>
+          <string>tls</string>
+          <string>renew</string>
+        </array>
+        <key>StartCalendarInterval</key>
+        <dict>
+          <key>Hour</key>
+          <integer>3</integer>
+          <key>Minute</key>
+          <integer>0</integer>
+        </dict>
+        <key>StandardOutPath</key>
+        <string>#{var}/log/rusty-photon-renew.log</string>
+        <key>StandardErrorPath</key>
+        <string>#{var}/log/rusty-photon-renew.log</string>
+      </dict>
+      </plist>
+    EOS
   end
 
   service do
@@ -24,7 +52,22 @@ class RustyPhotonSentinelNightly < Formula
     error_log_path var/"log/rusty-photon-sentinel.log"
   end
 
+  def caveats
+    <<~EOS
+      This formula also installs rusty-photon-doctor (the diagnosis and
+      repair tool; there is no separate doctor formula). To arm the daily
+      TLS renewal job — a no-op until `rusty-photon-doctor tls issue` has
+      staged certificates — link and load the bundled launchd plist once
+      (the opt path stays valid across upgrades, and launchd only
+      auto-loads jobs from the LaunchAgents directory):
+        ln -sfv #{opt_prefix}/rusty-photon-renew.plist ~/Library/LaunchAgents/
+        launchctl bootstrap gui/$UID ~/Library/LaunchAgents/rusty-photon-renew.plist
+      Details: docs/packaging-macos.md in the rusty-photon repo.
+    EOS
+  end
+
   test do
     assert_match "sentinel", shell_output("#{bin}/rusty-photon-sentinel --help")
+    assert_match "doctor", shell_output("#{bin}/rusty-photon-doctor --help")
   end
 end
