@@ -2,10 +2,10 @@
 class RustyPhotonCalibratorFlatsNightly < Formula
   desc "Calibrator flat field orchestrator - iterative exposure optimization with CoverCalibrator control"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.202608010734.gf0c3b11"
+  version "0.1.0+nightly.202608011809.g06ef23d"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-calibrator-flats-0.1.0+nightly.202608010734.gf0c3b11-aarch64-apple-darwin.tar.gz"
-  sha256 "dc30acd83272d805a666a7a0aea59d7092d88c14e136f6d33844ebf375a01eab"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-calibrator-flats-0.1.0+nightly.202608011809.g06ef23d-aarch64-apple-darwin.tar.gz"
+  sha256 "c0250b2586be5d88ad0f1f9ead1e63bc3de5ef250191d39062dc9a66db5af75b"
 
   depends_on :macos
   depends_on arch: :arm64
