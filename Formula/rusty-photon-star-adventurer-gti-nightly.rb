@@ -2,10 +2,10 @@
 class RustyPhotonStarAdventurerGtiNightly < Formula
   desc "ASCOM Alpaca driver for Sky-Watcher Star Adventurer GTi GEM"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.202607312329.g1c69cda"
+  version "0.1.0+nightly.202608010734.gf0c3b11"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-star-adventurer-gti-0.1.0+nightly.202607312329.g1c69cda-aarch64-apple-darwin.tar.gz"
-  sha256 "353611545eed541acb642020a9388451e5cd26f582e4a72d6dbfbbe3ad2fe7af"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-star-adventurer-gti-0.1.0+nightly.202608010734.gf0c3b11-aarch64-apple-darwin.tar.gz"
+  sha256 "f3cf6936aaddd760de1601a2769a0a4e8a959959743f5d98596c66f147c1884a"
 
   depends_on :macos
   depends_on arch: :arm64

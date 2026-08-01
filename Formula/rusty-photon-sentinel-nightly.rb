@@ -2,10 +2,10 @@
 class RustyPhotonSentinelNightly < Formula
   desc "Observatory monitoring and notification service"
   homepage "https://github.com/ivonnyssen/rusty-photon"
-  version "0.1.0+nightly.202607312329.g1c69cda"
+  version "0.1.0+nightly.202608010734.gf0c3b11"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sentinel-0.1.0+nightly.202607312329.g1c69cda-aarch64-apple-darwin.tar.gz"
-  sha256 "6e136742c6161967a7598cb3d1926d666b7f8b89e69bb3a36338172928fd7d25"
+  url "https://github.com/ivonnyssen/rusty-photon/releases/download/nightly/rusty-photon-sentinel-0.1.0+nightly.202608010734.gf0c3b11-aarch64-apple-darwin.tar.gz"
+  sha256 "d5cd3f6e5381a0b1471ba591e1a287817ba8f50c58087f81f02022aefa9b5a4f"
 
   depends_on :macos
   depends_on arch: :arm64
