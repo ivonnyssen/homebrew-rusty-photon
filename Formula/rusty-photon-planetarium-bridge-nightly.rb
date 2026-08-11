@@ -2,10 +2,10 @@
 class RustyPhotonPlanetariumBridgeNightly < Formula
   desc "Virtual ASCOM Alpaca Telescope: planetarium Align gestures become paused rusty-photon targets"
   homepage "https://github.com/rusty-photon/rusty-photon"
-  version "0.1.0+nightly.202608100617.g36b7968"
+  version "0.1.0+nightly.202608110559.g3f5abf1"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/rusty-photon/rusty-photon/releases/download/nightly/rusty-photon-planetarium-bridge-0.1.0+nightly.202608100617.g36b7968-aarch64-apple-darwin.tar.gz"
-  sha256 "9f6326c4daed8812cff27bd6730f1c18bfd972acea38dcd3fb04184ddd1c7202"
+  url "https://github.com/rusty-photon/rusty-photon/releases/download/nightly/rusty-photon-planetarium-bridge-0.1.0+nightly.202608110559.g3f5abf1-aarch64-apple-darwin.tar.gz"
+  sha256 "0d3f11b4de7e45ca2f78c4477ec02a0110b7ea86346b75cc1664b3bd93b56474"
 
   depends_on :macos
   depends_on arch: :arm64
