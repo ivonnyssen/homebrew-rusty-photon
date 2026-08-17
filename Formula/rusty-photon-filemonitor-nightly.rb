@@ -2,10 +2,10 @@
 class RustyPhotonFilemonitorNightly < Formula
   desc "File monitoring service for Rusty Photon"
   homepage "https://github.com/rusty-photon/rusty-photon"
-  version "0.1.0+nightly.202608160536.gda54e5f"
+  version "0.1.0+nightly.202608170258.g9785452"
   license any_of: ["MIT", "Apache-2.0"]
-  url "https://github.com/rusty-photon/rusty-photon/releases/download/nightly/rusty-photon-filemonitor-0.1.0+nightly.202608160536.gda54e5f-aarch64-apple-darwin.tar.gz"
-  sha256 "ff190d1dac095176cc50eda18e937e83b32f2eef370b0e8b53fa0f2260e94335"
+  url "https://github.com/rusty-photon/rusty-photon/releases/download/nightly/rusty-photon-filemonitor-0.1.0+nightly.202608170258.g9785452-aarch64-apple-darwin.tar.gz"
+  sha256 "157d155e82f6e2b6c7e6af456da0c391f8e0abcdc12a7b72b3b31628912a6efd"
 
   depends_on :macos
   depends_on arch: :arm64
